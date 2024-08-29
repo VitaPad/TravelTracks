@@ -1,0 +1,25 @@
+.h1 {
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  position: absolute;
+  top: 260px; /* Відступ зверху 260 пікселів */
+  left: 64px;
+  color: rgba(247, 247, 247, 1);
+  z-index: 99999;
+}
+.h2 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(247, 247, 247, 1);
+  position: absolute;
+  top: 328px; /* Відступ зверху 260 пікселів */
+  left: 64px;
+  color: rgba(247, 247, 247, 1);
+  z-index: 999999;
+}

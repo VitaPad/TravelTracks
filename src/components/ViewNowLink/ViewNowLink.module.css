@@ -1,0 +1,20 @@
+.link {
+  position: absolute;
+  top: 424px; /* Відступ зверху 260 пікселів */
+  left: 64px;
+  color: rgba(247, 247, 247, 1);
+  z-index: 9999999;
+  background-color: rgba(228, 72, 72, 1);
+  padding: 16px 48px 16px 48px;
+  border-radius: 200px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: left;
+}
+.link:hover,
+link:focus {
+  background: rgba(216, 67, 67, 1);
+}
