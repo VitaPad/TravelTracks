@@ -1,0 +1,9 @@
+.background {
+  background-image: url("../../assets/HomePage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 696px;
+  width: 100%;
+  margin-top: 68px;
+}
