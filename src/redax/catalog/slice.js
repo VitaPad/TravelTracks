@@ -1,4 +1,4 @@
-import { fetchTrucks } from "./operation";
+import { fetchTrucks, fetchTruksFilter } from "./operation";
 import { createSlice } from "@reduxjs/toolkit";
 
 const trucksSlice = createSlice({
@@ -34,6 +34,20 @@ const trucksSlice = createSlice({
       .addCase(fetchTrucks.rejected, (state) => {
         state.error = true;
         state.loading = false;
+      })
+      .addCase(fetchTruksFilter.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchTruksFilter.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.items = action.payload.items;
+        state.total = action.payload.total;
+        state.hasNextPage = action.payload.total > state.items.length;
+      })
+      .addCase(fetchTruksFilter.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
       }),
 });
 

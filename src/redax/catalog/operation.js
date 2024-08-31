@@ -10,6 +10,34 @@ export const fetchTrucks = createAsyncThunk(
       const response = await axios.get(
         `/?page=${currentPage}&limit=${itemsPerPage}`
       );
+      /*    console.log("API response:", response.data); */
+      return {
+        items: response.data.items,
+        total: response.data.total,
+      };
+    } catch (error) {
+      console.error("API request error:", error);
+      throw error;
+    }
+  }
+);
+
+export const fetchTruksFilter = createAsyncThunk(
+  "trucks/fetchTruksFilter",
+  async ({ currentPage, itemsPerPage, filters }) => {
+    const query = new URLSearchParams({
+      page: currentPage,
+      limit: itemsPerPage,
+      ...(filters.location && { location: filters.location }),
+      ...(filters.form && { form: filters.form }),
+      ...(filters.AC && { AC: filters.AC }),
+      ...(filters.transmission && { transmission: filters.transmission }),
+      ...(filters.kitchen && { kitchen: filters.kitchen }),
+      ...(filters.TV && { TV: filters.TV }),
+      ...(filters.bathroom && { bathroom: filters.bathroom }),
+    });
+    try {
+      const response = await axios.get(`/?${query.toString()}`);
       console.log("API response:", response.data);
       return {
         items: response.data.items,

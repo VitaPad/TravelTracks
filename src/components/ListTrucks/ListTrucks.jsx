@@ -16,6 +16,7 @@ import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import css from "./ListTrucks.module.css";
 import sprite from "../../assets/sprite/sprite.svg";
 import ShowMoreBtn from "../ShowMoreBtn/ShowMoreBtn";
+import { selectLocation } from "../../redax/filter/selector";
 
 export default function ListTrucks() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export default function ListTrucks() {
   const itemsPerPage = useSelector(selectItemsPerPage);
   const hasNextPage = useSelector(selectHasNextPage);
   const isLoading = useSelector(selectIsLoading);
+  const location = useSelector(selectLocation);
 
   const handleLoadMore = () => {
     console.log("Load more clicked");
@@ -35,8 +37,8 @@ export default function ListTrucks() {
   };
 
   useEffect(() => {
-    dispatch(fetchTrucks({ currentPage, itemsPerPage }));
-  }, [dispatch, currentPage, itemsPerPage]);
+    dispatch(fetchTrucks({ currentPage, itemsPerPage, filters: { location } }));
+  }, [dispatch, currentPage, itemsPerPage, location]);
   console.log("Trucks:", trucks);
 
   return (
