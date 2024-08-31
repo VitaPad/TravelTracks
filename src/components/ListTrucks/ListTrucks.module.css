@@ -1,0 +1,105 @@
+.container {
+  margin-top: 48px;
+  width: 888px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(218, 221, 225, 1);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.img {
+  width: 292px;
+  height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 24px;
+}
+.wrapper {
+}
+
+.name {
+  margin: 0;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
+  display: block;
+  margin-bottom: 12px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: rgba(71, 84, 103, 1);
+}
+.rating_text {
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-right: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.rating_text:first-child {
+  /*  text-decoration: underline; */
+}
+.rating_text:last-child {
+  margin-right: 0;
+}
+.price {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  margin: 0;
+}
+
+.text {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  background-color: rgba(242, 244, 247, 1);
+  padding: 12px 18px 12px 18px;
+  border-radius: 100px;
+  opacity: 0px;
+  margin: 0 8px 8px 0;
+}
+.icon {
+  margin-right: 8px; /* Відступ між іконкою і текстом */
+  vertical-align: middle;
+}
+.icon_price {
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.rating {
+  display: flex;
+}

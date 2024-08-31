@@ -12,8 +12,8 @@ export const fetchTrucks = createAsyncThunk(
       );
       console.log("API response:", response.data);
       return {
-        items: response.data.items || [], // Переконайтеся, що items є масивом
-        total: response.data.total || 0, // Переконайтеся, що total є числом
+        items: response.data.items,
+        total: response.data.total,
       };
     } catch (error) {
       console.error("API request error:", error);
