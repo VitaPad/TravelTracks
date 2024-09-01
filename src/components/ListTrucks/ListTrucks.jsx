@@ -94,9 +94,9 @@ export default function ListTrucks() {
               {truck.kitchen && (
                 <p className={css.text}>
                   <svg className={css.icon} width="20" height="20">
-                    <use href={`${sprite}#icon-cup-hot`}></use>
+                    <use href={`${sprite}#icon-engine`}></use>
                   </svg>
-                  Kitchen
+                  {truck.engine}
                 </p>
               )}
               {truck.AC && (
@@ -123,7 +123,7 @@ export default function ListTrucks() {
                   Bathroom
                 </p>
               )}
-              <ShowMoreBtn />
+              <ShowMoreBtn id={truck.id} />
             </div>
           </div>
         ))}

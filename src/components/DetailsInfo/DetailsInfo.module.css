@@ -1,0 +1,32 @@
+.flexRow {
+  display: flex;
+  justify-content: space-between; /* Розподіл елементів по краях */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+.container {
+  width: 528px;
+  margin-left: 58px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+.h3 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(16, 24, 40, 1);
+}
+.text {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(16, 24, 40, 1);
+}
+.wrapper {
+  border-top: 1px solid rgba(218, 221, 225, 1);
+}

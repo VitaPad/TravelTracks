@@ -49,3 +49,15 @@ export const fetchTruksFilter = createAsyncThunk(
     }
   }
 );
+
+export const fetchTruckById = createAsyncThunk(
+  "catalog/fetchTruckById",
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.get(`/${id}`);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

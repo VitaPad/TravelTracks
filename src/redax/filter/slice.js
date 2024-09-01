@@ -4,7 +4,7 @@ const filtersInitial = {
   location: "",
   form: "",
   AC: false,
-  transmission: false,
+  transmission: "",
   kitchen: false,
   TV: false,
   bathroom: false,

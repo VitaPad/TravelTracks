@@ -1,0 +1,40 @@
+.text {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  background-color: rgba(218, 221, 225, 1);
+
+  padding: 12px 18px 12px 18px;
+  border-radius: 100px;
+  opacity: 0px;
+  margin: 0 8px 8px 0;
+}
+.icon {
+  margin-right: 8px; /* Відступ між іконкою і текстом */
+  vertical-align: middle;
+}
+.container {
+  display: flex;
+  width: 628px;
+  height: 588px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: rgba(247, 247, 247, 1);
+
+  margin-bottom: 80px;
+  margin-left: 64px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 528px;
+  margin-top: 52px;
+  margin-left: 44px;
+}

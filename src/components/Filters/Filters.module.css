@@ -26,7 +26,9 @@
   padding-top: 24px;
   margin-bottom: 24px;
 }
+
 .text {
+  background-color: rgba(247, 247, 247, 1);
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
@@ -46,4 +48,7 @@
   width: 108px;
   height: 108px;
   margin: 0;
+}
+.text:focus {
+  border: 1px solid rgba(228, 72, 72, 1);
 }

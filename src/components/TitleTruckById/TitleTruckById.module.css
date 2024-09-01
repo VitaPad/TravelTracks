@@ -1,0 +1,78 @@
+.container {
+  margin-left: 48px;
+}
+
+.title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(16, 24, 40, 1);
+  margin-top: 48px;
+  margin-bottom: 8px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.icon {
+  margin-right: 8px; /* Відступ між іконкою і текстом */
+  vertical-align: middle;
+}
+.price {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(16, 24, 40, 1);
+  margin-top: 16px;
+}
+
+.rating_text {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin: 0;
+}
+
+.location {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(16, 24, 40, 1);
+  margin: 0;
+}
+.box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.img {
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 48px;
+  /*   width: 100%; */
+}
+.description {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(71, 84, 103, 1);
+  margin-top: 28px;
+}
