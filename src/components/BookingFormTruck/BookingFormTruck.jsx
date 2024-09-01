@@ -1,5 +1,8 @@
-import css from "./BookingForm.module.css"; // Замість цього використовуйте свої стилі
-
+import { useState } from "react";
+import css from "./BookingForm.module.css";
+import toast from "react-hot-toast";
+import { DateRangePicker } from "react-date-range";
+import { format } from "date-fns";
 export default function BookingFormTruck() {
   const [formState, setFormState] = useState({
     startDate: new Date(),
@@ -36,6 +39,7 @@ export default function BookingFormTruck() {
       startDate: item.selection.startDate,
       endDate: item.selection.endDate,
     }));
+    setIsDatePickerOpen(false);
   };
 
   const handleSendForm = (e) => {
@@ -51,11 +55,7 @@ export default function BookingFormTruck() {
     });
   };
   return (
-    <form
-      action="/api/bookings" // URL, куди будуть відправлені дані форми
-      method="POST" // Метод відправки даних
-      className={css.form}
-    >
+    <form onSubmit={handleSendForm} className={css.form}>
       <h2 className={css.title}>Book your campervan now</h2>
       <p className={css.text}>
         Stay connected! We are always ready to help you.
@@ -64,6 +64,7 @@ export default function BookingFormTruck() {
         type="text"
         name="name"
         required
+        onChange={handleChange}
         className={css.input}
         placeholder="Name*"
       />
@@ -73,6 +74,7 @@ export default function BookingFormTruck() {
         required
         className={css.input}
         placeholder="Email*"
+        onChange={handleChange}
       />
       <input
         type="text"
@@ -80,11 +82,36 @@ export default function BookingFormTruck() {
         required
         className={css.input}
         placeholder="Booking date*"
+        onClick={toggleDatePicker}
+        value={
+          formState.endDate
+            ? formatDate(formState.startDate, formState.endDate)
+            : ""
+        }
       />
+      {isDatePickerOpen && (
+        <div className={css.dataPickew}>
+          <DateRangePicker
+            onChange={handleDateChange}
+            showSelectionPreview={true}
+            moveRangeOnFirstSelection={false}
+            ranges={[
+              {
+                startDate: formState.startDate,
+                endDate: formState.endDate,
+                key: "selection",
+              },
+            ]}
+            className={css.dataPick}
+          />
+        </div>
+      )}
       <textarea
         name="comment"
         placeholder="Comment"
         className={css.commentInput}
+        onChange={handleChange}
+        value={formState.comment}
       />
       <button className={css.sendBtn} type="submit">
         Send
