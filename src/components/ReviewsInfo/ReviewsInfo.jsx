@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import sprite from "../../assets/sprite/sprite.svg";
 import { selectTruckById } from "../../redax/catalog/selector";
-import css from "./ReviewsInfi.module.css";
+import css from "./ReviewsInfo.module.css";
 
 export default function RewiewsInfo({ id }) {
   const truck = useSelector((state) => selectTruckById(state, id));
