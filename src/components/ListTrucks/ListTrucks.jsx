@@ -30,7 +30,6 @@ export default function ListTrucks() {
   const location = useSelector(selectLocation);
 
   const handleLoadMore = () => {
-    console.log("Load more clicked");
     if (hasNextPage) {
       dispatch(setPage(currentPage + 1));
     }
@@ -39,7 +38,6 @@ export default function ListTrucks() {
   useEffect(() => {
     dispatch(fetchTrucks({ currentPage, itemsPerPage, filters: { location } }));
   }, [dispatch, currentPage, itemsPerPage, location]);
-  console.log("Trucks:", trucks);
 
   return (
     <div className={css.container}>

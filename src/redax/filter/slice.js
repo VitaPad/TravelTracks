@@ -46,6 +46,7 @@ export const {
   setKitchenFilter,
   setTVFilter,
   setBathroomFilter,
+  clearLocationFilter,
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;

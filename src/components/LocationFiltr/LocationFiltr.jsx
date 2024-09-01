@@ -3,19 +3,20 @@ import css from "./LocationFiltr.module.css";
 import { setLocationFilter } from "../../redax/filter/slice";
 import { selectLocation } from "../../redax/filter/selector";
 import { fetchTruksFilter } from "../../redax/catalog/operation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function LocationFiltr() {
   const dispatch = useDispatch();
   const location = useSelector(selectLocation);
+  const [inputValue, setInputValue] = useState("");
 
   function handleFilerLocation(event) {
     const value = event.target.value.trim();
+    setInputValue(value);
     dispatch(setLocationFilter(value));
   }
 
   useEffect(() => {
-    // Виклик асинхронного тхунку при зміні фільтра
     dispatch(
       fetchTruksFilter({
         currentPage: 1,
@@ -36,7 +37,7 @@ export default function LocationFiltr() {
         className={css.input}
         placeholder="Country, City"
         onChange={handleFilerLocation}
-        value={location}
+        value={inputValue}
       />
     </div>
   );

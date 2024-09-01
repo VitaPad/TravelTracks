@@ -36,17 +36,17 @@ const trucksSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchTruksFilter.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
         state.error = null;
       })
       .addCase(fetchTruksFilter.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.items = action.payload.items;
         state.total = action.payload.total;
         state.hasNextPage = action.payload.total > state.items.length;
       })
       .addCase(fetchTruksFilter.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.error.message;
       }),
 });
