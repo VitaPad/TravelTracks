@@ -1,0 +1,48 @@
+.container {
+  width: 628px;
+  margin-left: 58px;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  background: var(--Badges, #f2f4f7);
+  color: var(--Button, #e44848);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+.comment {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(71, 84, 103, 1);
+}
+.personWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.activeStar {
+  fill: #ffd700; /* Жовтий колір для активних зірок */
+}
+
+.inactiveStar {
+  fill: #d3d3d3; /* Сірий колір для неактивних зірок */
+}

@@ -4,6 +4,7 @@ import css from "./Feauter.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTruckById } from "../../redax/catalog/operation";
+import RewiewsInfo from "../ReviewsInfo/ReviewsInfo";
 
 export default function Feauter() {
   const [isLinkActive, setIsLinkActive] = useState("features");
@@ -38,7 +39,16 @@ export default function Feauter() {
             }
           ></div>
         </div>
-        <FeauterInfo id={id} />
+        <div className={css.detailsReviews}>
+          {isLinkActive === "features" ? (
+            <FeauterInfo id={id} />
+          ) : (
+            <RewiewsInfo id={id} />
+          )}
+        </div>
+
+        {/*  <FeauterInfo id={id} />
+        <RewiewsInfo id={id} /> */}
       </div>
       {/*   <div className={css.infoWrapper}>
         <div className={css.detailsReviews}>

@@ -63,3 +63,8 @@
   margin-left: 48px;
   margin-top: 60px;
 }
+.container {
+  display: flex;
+  justify-content: space-between; /* Додає відступи між блоками */
+  gap: 20px; /* Між елементами в контейнері */
+}

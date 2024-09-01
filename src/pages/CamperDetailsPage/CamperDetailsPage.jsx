@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import TitleTruckById from "../../components/TitleTruckById/TitleTruckById";
 import { Header } from "../../components/Header/Header";
 import Feauter from "../../components/Feauter/Feauter";
+import BookingFormTruck from "../../components/BookingFormTruck/BookingFormTruck";
+import css from "./CampareDetailsPage.module.css";
 
 export default function CamperDetailsPage() {
   const { id } = useParams();
@@ -18,7 +20,10 @@ export default function CamperDetailsPage() {
     <>
       <Header />
       <TitleTruckById id={id} />
-      <Feauter />
+      <div className={css.container}>
+        <Feauter />
+        <BookingFormTruck />
+      </div>
     </>
   );
 }
