@@ -68,6 +68,8 @@
   /*   width: 100%; */
 }
 .description {
+  display: block;
+  margin-right: 64px;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
